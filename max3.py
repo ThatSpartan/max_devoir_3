@@ -32,6 +32,7 @@ def maxSequence(nombres):
 
 while True:
     print('\nCalculons la longeur de la séquence la plus longue.')
-    mes_nombres = list(eval(input('Veuillez entrer plusieurs nombres séparés par des espaces ')))
+    mes_nombres = input('Veuillez entrer plusieurs nombres séparés par des espaces ').split(' ')
+    mes_nombres = list(map(int, mes_nombres))
     seq_max = maxSequence(mes_nombres)
     print(f"La séquence la plus longue contient {seq_max} nombres")
